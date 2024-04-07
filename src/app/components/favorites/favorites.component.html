@@ -1,0 +1,15 @@
+<h3>I tuoi film preferiti:</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let movie of movies">
+            <div class="card w-100">
+                <div class="card-body mb-4" *ngIf="movies">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><img src="{{ imageURL }}{{ movie.poster_path }}" class="card-img-top"
+                        alt="Locandina {{ movie.title }}" /></h6>
+                    <p class="card-text">{{movie.overview}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
